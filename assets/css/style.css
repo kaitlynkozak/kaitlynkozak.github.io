@@ -1,0 +1,44 @@
+:root {
+  --light-bg: #f8f9fa;
+  --dark-bg: #121212;
+  --light-text: #111;
+  --dark-text: #eee;
+  --accent: #0077b6;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0; padding: 0;
+  background: var(--light-bg);
+  color: var(--light-text);
+  transition: 0.3s;
+}
+
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.hero {
+  text-align: center; padding: 80px 20px;
+  background: var(--accent);
+  color: white;
+}
+
+.profile-img { width: 140px; border-radius: 50%; border: 3px solid white; }
+
+.main-nav a { margin: 0 10px; text-decoration: none; color: white; font-weight: bold; }
+
+.section, .projects-grid, .skills-list, .contact-form { padding: 40px 20px; }
+
+.projects-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+}
+
+.project-card, .skill { background: white; border-radius: 8px; padding: 18px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);}
+body.dark .project-card { background: #222; }
+
+.skill-bar {
+  width: 0; height: 8px; background: var(--accent); border-radius: 4px;
+  transition: 1s ease;
+}
